@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="keskustelusivustyle.css">
+    <link rel="stylesheet" href="styles.css">
     <meta name="keyword" content="keskustelusivu, kommentti, kommentoida">
     <meta name="description" content="Keskustelusivu, jossa käyttäjäyt voivat jakaa mielipiteitään">
     <meta name="author" content="Cetin"> 
@@ -18,14 +18,13 @@
     <a href="portfoliosivu.html"> Portfoliosivu </a>
     <a href="kokemus.html">Työkokemus</a>
 
-
-    <details>
-        <summary>Kommentoi</summary>
-    <h2>Nimi:</h2>
+    <button onclick="document.getElementById('dlg').showModal()">Avaa dialogi</button>
+    <dialog id="dlg">
+        
+        <p>Nimi:</p>
         <input placeholder="Nimi" required> </input>
         <p>Anna kommenttisi:</p>
         <input placeholder="Anna Komentti" required>
-        <button class="submit-btn">Lähetä kommentti</button>
         <div>
         <label for="consent">
             <input type="checkbox">
@@ -35,17 +34,41 @@
     
         <input type="email" placeholder="Sähköpostiosoite" required>
         <input type="date" name="syntymäaika" required>
-    </details>
+        <button class="submit-btn">Lähetä kommentti</button>
+        <button onclick="document.getElementById('dlg').close()">sulje</button>
+    </dialog>
 
-          <div>
-            <div>
-                <p>Lähettäjä: 54321@outlook.com | 21.03.2025, 14:30</p>
-            </div>
-                <p><strong> Mielenkiintoinen näkökulma! </strong></p>
-                <p>Lähettäjä: 1234567@icloud.com | 20.03.2025, 09:00</p>
-            </div>
-                <p><strong>Onko tämä saatavilla myös muilla kielillä?</strong></p>
-            </div>
-        </div>  
-    </body>
+<h2>Aiemmat kommentit</h2>
+
+<div>
+    <p><b>esimerkki@email.com - 2023-10-27 10:00</b></p>
+    <p>Tämä on esimerkki kommentti. Olen samaa mieltä!</p>
+</div>
+
+<div>
+    <p><b>toinen@email.com - 2023-10-26 15:30</b></p>
+    <p>Mielenkiintoinen näkökulma. Kiitos!</p>
+</div>
+
+<div>
+    <p><b>kolmas@email.com - 2023-10-25 09:15</b></p>
+    <p>Olen eri mieltä. Perustelen myöhemmin tarkemmin.</p>
+</div>
+
+<div>
+    <p><b>neljas@email.com - 2023-10-24 18:45</b></p>
+    <p>Hyvä pointti! Tätä pitää miettiä.</p>
+</div>
+
+<div>
+    <p><b>viides@email.com - 2023-10-23 12:00</b></p>
+    <p>Kiitos tiedosta!</p>
+</div>
+
+<div>
+    <p><b>kuudes@email.com - 2023-10-22 21:00</b></p>
+    <p>Tämä on todella hyödyllistä!</p>
+</div>
+
+</body>
 </html>
