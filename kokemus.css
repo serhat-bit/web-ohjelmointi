@@ -40,10 +40,3 @@ body {
     label{color: #666;
 
     }
-    button{
-        color: white;
-        background-color: red;
-    }
-    button:hover{
-        color: hotpink;
-    }
